@@ -1,0 +1,101 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CEDCF992-3999-459D-A485-18F1E1FFB2B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{9669B143-8FB5-4373-AFB6-8C23A8996909}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence", "{F9712D73-6431-486C-B403-07485D530837}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{D5F74990-2684-4F00-8E28-D04CBF9CB3FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{63F14E46-96E0-40D4-BA4E-299DC5FDF4B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Host", "Host", "{B1FE9CEC-4525-40E6-895B-58676BE1537C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCutting", "CrossCutting", "{3E4B4AC5-4BE4-4D63-9C74-05025CF963E2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HappyTrip.Reservation.System.Host", "src\Host\HappyTrip.Reservation.System.Host\HappyTrip.Reservation.System.Host.csproj", "{C3DF0FBF-B485-4AA3-A459-495A2CB42EFC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HappyTrip.Reservation.System.Logging", "src\CrossCutting\HappyTrip.Reservation.System.Logging\HappyTrip.Reservation.System.Logging.csproj", "{CC5656AA-660E-41FA-B29F-438D0E6AFBDD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HappyTrip.Reservation.System.Domain", "src\Domain\HappyTrip.Reservation.System.Domain\HappyTrip.Reservation.System.Domain.csproj", "{3073C219-D3CB-4436-BB50-00621154572F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HappyTrip.Reservation.System.Database", "src\Infrastructure\HappyTrip.Reservation.System.Database\HappyTrip.Reservation.System.Database.csproj", "{9006624B-9F99-4B5A-8C86-8D0E1C4FB896}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HappyTrip.Reservation.System.Repository", "src\Persistence\HappyTrip.Reservation.System.Repository\HappyTrip.Reservation.System.Repository.csproj", "{086255E6-B1F8-4426-BC7B-B8C26F9F2616}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserInterface", "UserInterface", "{5B25FE08-626C-43FD-B804-0BEFADB8EBC9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HappyTrip.Reservation.System.Application", "src\Application\HappyTrip.Reservation.System.Application\HappyTrip.Reservation.System.Application.csproj", "{D1FBC8A7-45C8-4827-8EF2-0897CE8403E5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HappyTrip.Reservation.System.Console.UI", "src\UserInterface\HappyTrip.Reservation.System.Console.UI\HappyTrip.Reservation.System.Console.UI.csproj", "{8A27EE8B-B17E-46E3-86E9-F53F253AE78D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{E5AFD0BF-391C-4692-8AAC-20B8B21E34AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration-Testing", "Integration-Testing", "{34AB3BBF-DC7C-4B8C-A22E-CFA2790C4E5B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit-Testing", "Unit-Testing", "{2720E2F2-A5A7-45A1-9F64-100BC1E438F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3DF0FBF-B485-4AA3-A459-495A2CB42EFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3DF0FBF-B485-4AA3-A459-495A2CB42EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3DF0FBF-B485-4AA3-A459-495A2CB42EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3DF0FBF-B485-4AA3-A459-495A2CB42EFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC5656AA-660E-41FA-B29F-438D0E6AFBDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC5656AA-660E-41FA-B29F-438D0E6AFBDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC5656AA-660E-41FA-B29F-438D0E6AFBDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC5656AA-660E-41FA-B29F-438D0E6AFBDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3073C219-D3CB-4436-BB50-00621154572F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3073C219-D3CB-4436-BB50-00621154572F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3073C219-D3CB-4436-BB50-00621154572F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3073C219-D3CB-4436-BB50-00621154572F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9006624B-9F99-4B5A-8C86-8D0E1C4FB896}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9006624B-9F99-4B5A-8C86-8D0E1C4FB896}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9006624B-9F99-4B5A-8C86-8D0E1C4FB896}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9006624B-9F99-4B5A-8C86-8D0E1C4FB896}.Release|Any CPU.Build.0 = Release|Any CPU
+		{086255E6-B1F8-4426-BC7B-B8C26F9F2616}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{086255E6-B1F8-4426-BC7B-B8C26F9F2616}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{086255E6-B1F8-4426-BC7B-B8C26F9F2616}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{086255E6-B1F8-4426-BC7B-B8C26F9F2616}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1FBC8A7-45C8-4827-8EF2-0897CE8403E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1FBC8A7-45C8-4827-8EF2-0897CE8403E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1FBC8A7-45C8-4827-8EF2-0897CE8403E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1FBC8A7-45C8-4827-8EF2-0897CE8403E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A27EE8B-B17E-46E3-86E9-F53F253AE78D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A27EE8B-B17E-46E3-86E9-F53F253AE78D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A27EE8B-B17E-46E3-86E9-F53F253AE78D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A27EE8B-B17E-46E3-86E9-F53F253AE78D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9669B143-8FB5-4373-AFB6-8C23A8996909} = {CEDCF992-3999-459D-A485-18F1E1FFB2B2}
+		{F9712D73-6431-486C-B403-07485D530837} = {CEDCF992-3999-459D-A485-18F1E1FFB2B2}
+		{D5F74990-2684-4F00-8E28-D04CBF9CB3FA} = {CEDCF992-3999-459D-A485-18F1E1FFB2B2}
+		{63F14E46-96E0-40D4-BA4E-299DC5FDF4B0} = {CEDCF992-3999-459D-A485-18F1E1FFB2B2}
+		{B1FE9CEC-4525-40E6-895B-58676BE1537C} = {CEDCF992-3999-459D-A485-18F1E1FFB2B2}
+		{3E4B4AC5-4BE4-4D63-9C74-05025CF963E2} = {CEDCF992-3999-459D-A485-18F1E1FFB2B2}
+		{C3DF0FBF-B485-4AA3-A459-495A2CB42EFC} = {B1FE9CEC-4525-40E6-895B-58676BE1537C}
+		{CC5656AA-660E-41FA-B29F-438D0E6AFBDD} = {3E4B4AC5-4BE4-4D63-9C74-05025CF963E2}
+		{3073C219-D3CB-4436-BB50-00621154572F} = {9669B143-8FB5-4373-AFB6-8C23A8996909}
+		{9006624B-9F99-4B5A-8C86-8D0E1C4FB896} = {D5F74990-2684-4F00-8E28-D04CBF9CB3FA}
+		{086255E6-B1F8-4426-BC7B-B8C26F9F2616} = {F9712D73-6431-486C-B403-07485D530837}
+		{5B25FE08-626C-43FD-B804-0BEFADB8EBC9} = {CEDCF992-3999-459D-A485-18F1E1FFB2B2}
+		{D1FBC8A7-45C8-4827-8EF2-0897CE8403E5} = {63F14E46-96E0-40D4-BA4E-299DC5FDF4B0}
+		{8A27EE8B-B17E-46E3-86E9-F53F253AE78D} = {5B25FE08-626C-43FD-B804-0BEFADB8EBC9}
+		{34AB3BBF-DC7C-4B8C-A22E-CFA2790C4E5B} = {E5AFD0BF-391C-4692-8AAC-20B8B21E34AD}
+		{2720E2F2-A5A7-45A1-9F64-100BC1E438F8} = {E5AFD0BF-391C-4692-8AAC-20B8B21E34AD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7EC3EFE-87EC-419D-B625-7FC766974B7A}
+	EndGlobalSection
+EndGlobal
