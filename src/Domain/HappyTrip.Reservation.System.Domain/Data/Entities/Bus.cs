@@ -13,9 +13,9 @@ namespace HappyTrip.Reservation.System.Domain.Data.Entities
     public class Bus
     {
         [Key, MaxLength(6)]
-        public string BusNumber { get; set; }
+        public string BusNumber { get; set; } = default!;
         [Required, MaxLength(30)]
-        public string Company { get; set; }
+        public string Company { get; set; } = default!;
         [Required]
         public Guid DriverID { get; set; }
         [Required]
@@ -27,7 +27,7 @@ namespace HappyTrip.Reservation.System.Domain.Data.Entities
         [Required]
         public BusTypeEnum BusType { get; set; }
 
-        public Bus(string busNumber, string company, Guid driverID, double price, int capacity, int lid, BusTypeEnum busType)
+        /*public Bus(string busNumber, string company, Guid driverID, double price, int capacity, int lid, BusTypeEnum busType)
         {
             BusNumber = busNumber ?? throw new ArgumentNullException(nameof(busNumber));
             Company = company ?? throw new ArgumentNullException(nameof(company));
@@ -41,6 +41,6 @@ namespace HappyTrip.Reservation.System.Domain.Data.Entities
         public Bus()
         {
 
-        }
+        }*/
     }
 }

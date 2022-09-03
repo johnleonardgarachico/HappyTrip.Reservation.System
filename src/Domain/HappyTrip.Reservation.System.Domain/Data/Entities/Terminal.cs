@@ -7,13 +7,13 @@ namespace HappyTrip.Reservation.System.Domain.Data.Entities
     public class Terminal
     {
         [Key]
-        public Guid TerminalID { get; set; }
+        public Guid TerminalID { get; set; } = default!;
         [Required, MaxLength(30)]
-        public string Company { get; set; }
+        public string Company { get; set; } = default!;
         [Required, MaxLength(30)]
-        public string Area { get; set; }
+        public string Area { get; set; } = default!;
 
-        public Terminal(Guid terminalID, string company, string area)
+        /*public Terminal(Guid terminalID, string company, string area)
         {
             TerminalID = terminalID;
             Company = company ?? throw new ArgumentNullException(nameof(company));
@@ -23,6 +23,6 @@ namespace HappyTrip.Reservation.System.Domain.Data.Entities
         public Terminal()
         {
 
-        }
+        }*/
     }
 }

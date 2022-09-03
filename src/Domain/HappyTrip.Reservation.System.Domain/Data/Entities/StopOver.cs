@@ -16,11 +16,11 @@ namespace HappyTrip.Reservation.System.Domain.Data.Entities
         [Required]
         public int Sequence { get; set; }
         [Required, MaxLength(30)]
-        public string Area { get; set; }
+        public string Area { get; set; } = default!;
         [Required]
         public TimeSpan Period { get; set; }
 
-        public StopOver(Guid tripID, int sequence, string area, TimeSpan period)
+        /*public StopOver(Guid tripID, int sequence, string area, TimeSpan period)
         {
             TripID = tripID;
             Sequence = sequence;
@@ -31,6 +31,6 @@ namespace HappyTrip.Reservation.System.Domain.Data.Entities
         public StopOver()
         {
 
-        }
+        }*/
     }
 }

@@ -28,7 +28,7 @@ namespace HappyTrip.Reservation.System.Repository.DatabaseContext
         {
             // Seeds sample data on database
 
-            modelBuilder.Entity<Bus>().HasData(
+            /*modelBuilder.Entity<Bus>().HasData(
                 new Bus(busNumber: "FBC001", 
                         company: "Five Star Bus Co.", 
                         driverID: Guid.NewGuid(),
@@ -144,7 +144,7 @@ namespace HappyTrip.Reservation.System.Repository.DatabaseContext
                          origin: "Lucena, Quezon",
                          destination: "Pasay, Metro Manila",
                          departure: new DateTime(2022, 8, 24, 15, 30, 00),
-                         arrival: new DateTime(2022, 8, 24, 19, 15, 00)));
+                         arrival: new DateTime(2022, 8, 24, 19, 15, 00)));*/
 
             base.OnModelCreating(modelBuilder);
         }

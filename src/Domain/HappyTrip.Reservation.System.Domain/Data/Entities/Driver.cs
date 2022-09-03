@@ -14,17 +14,17 @@ namespace HappyTrip.Reservation.System.Domain.Data.Entities
         [Key]
         public Guid DriverID { get; set; }
         [Required, MaxLength(20)]
-        public string FirstName { get; set; }
+        public string FirstName { get; set; } = default!;
         [MaxLength(20)]
-        public string MiddleName { get; set; }
+        public string MiddleName { get; set; } = default!;
         [Required, MaxLength(20)]
-        public string LastName { get; set; }
+        public string LastName { get; set; } = default!;
         [Required]
-        public string LicenseID { get; set; }
+        public string LicenseID { get; set; } = default!;
         [Required]
         public DateTime BirthDate { get; set; }
 
-        public Driver(Guid driverID, string firstName, string lastName, string licenseID, DateTime birthDate, string middleName = "")
+        /*public Driver(Guid driverID, string firstName, string lastName, string licenseID, DateTime birthDate, string middleName = "")
         {
             DriverID = driverID;
             FirstName = firstName ?? throw new ArgumentNullException(nameof(firstName));
@@ -36,6 +36,6 @@ namespace HappyTrip.Reservation.System.Domain.Data.Entities
         public Driver()
         {
 
-        }
+        }*/
     }
 }

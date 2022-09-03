@@ -9,17 +9,17 @@ namespace HappyTrip.Reservation.System.Domain.Data.Entities
         [Key]
         public Guid TripID { get; set; }
         [Required, MaxLength(6)]
-        public string BusNumber { get; set; }
+        public string BusNumber { get; set; } = default!;
         [Required, MaxLength(20)]
-        public string Origin { get; set; }
+        public string Origin { get; set; } = default!;
         [Required, MaxLength(20)]
-        public string Destination { get; set; }
+        public string Destination { get; set; } = default!;
         [Required]
         public DateTime Departure { get; set; }
         [Required]
         public DateTime Arrival { get; set; }
 
-        public Trip(Guid tripID, string busNumber, string origin, string destination, DateTime departure, DateTime arrival)
+        /*public Trip(Guid tripID, string busNumber, string origin, string destination, DateTime departure, DateTime arrival)
         {
             TripID = tripID;
             BusNumber = busNumber ?? throw new ArgumentNullException(nameof(busNumber));
@@ -32,6 +32,6 @@ namespace HappyTrip.Reservation.System.Domain.Data.Entities
         public Trip()
         {
 
-        }
+        }*/
     }
 }
