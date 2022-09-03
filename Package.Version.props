@@ -1,0 +1,6 @@
+<Project>
+    <!--<PropertyGroup Label="Database">
+      <MicrosoftEntityFrameworkCore>6.0.8</MicrosoftEntityFrameworkCore>
+    </PropertyGroup>-->
+	<PackageReference Update="Microsoft.EntityFrameworkCore" Version="6.0.8" />
+</Project>

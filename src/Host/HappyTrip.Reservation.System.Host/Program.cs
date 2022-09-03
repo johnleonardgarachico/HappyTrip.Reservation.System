@@ -1,34 +1,33 @@
-var builder = WebApplication.CreateBuilder(args);
+using HappyTrip.Reservation.System.Repository.DatabaseContext;
+using Microsoft.EntityFrameworkCore;
 
-// Add services to the container.
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-
-app.UseHttpsRedirection();
-
-var summaries = new[]
+namespace HappyTrip.Reservation.System.Host
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+    public class Program
+    {
+        public static async Task Main(string[] args)
+        {
+            var webHost = CreateHostBuilder(args).Build();
 
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast = Enumerable.Range(1, 5).Select(index =>
-       new WeatherForecast
-       (
-           DateTime.Now.AddDays(index),
-           Random.Shared.Next(-20, 55),
-           summaries[Random.Shared.Next(summaries.Length)]
-       ))
-        .ToArray();
-    return forecast;
-});
+            await ApplyMigrations(webHost.Services);
 
-app.Run();
+            await webHost.RunAsync();
+        }
 
-internal record WeatherForecast(DateTime Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+        private static async Task ApplyMigrations(IServiceProvider serviceProvider)
+        {
+            using var scope = serviceProvider.CreateScope();
+
+            await using HappyTripContext dbContext = scope.ServiceProvider.GetRequiredService<HappyTripContext>();
+
+            await dbContext.Database.MigrateAsync();
+        }
+
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Microsoft.Extensions.Hosting.Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
+    }
 }
