@@ -39,6 +39,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration-Testing", "Inte
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit-Testing", "Unit-Testing", "{2720E2F2-A5A7-45A1-9F64-100BC1E438F8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{84C9CA15-46BC-46D8-B13C-F623761FA89F}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.targets = Directory.Build.targets
+		Packages.props = Packages.props
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HappyTrip.Reservation.System.Controller", "HappyTrip.Reservation.System.Controller\HappyTrip.Reservation.System.Controller.csproj", "{51E7886B-0FE7-4D38-966F-4A99F5F07411}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +81,10 @@ Global
 		{8A27EE8B-B17E-46E3-86E9-F53F253AE78D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A27EE8B-B17E-46E3-86E9-F53F253AE78D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A27EE8B-B17E-46E3-86E9-F53F253AE78D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51E7886B-0FE7-4D38-966F-4A99F5F07411}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51E7886B-0FE7-4D38-966F-4A99F5F07411}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51E7886B-0FE7-4D38-966F-4A99F5F07411}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51E7886B-0FE7-4D38-966F-4A99F5F07411}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,6 +106,7 @@ Global
 		{8A27EE8B-B17E-46E3-86E9-F53F253AE78D} = {5B25FE08-626C-43FD-B804-0BEFADB8EBC9}
 		{34AB3BBF-DC7C-4B8C-A22E-CFA2790C4E5B} = {E5AFD0BF-391C-4692-8AAC-20B8B21E34AD}
 		{2720E2F2-A5A7-45A1-9F64-100BC1E438F8} = {E5AFD0BF-391C-4692-8AAC-20B8B21E34AD}
+		{51E7886B-0FE7-4D38-966F-4A99F5F07411} = {5B25FE08-626C-43FD-B804-0BEFADB8EBC9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E7EC3EFE-87EC-419D-B625-7FC766974B7A}
