@@ -20,9 +20,31 @@ namespace HappyTrip.Reservation.System.Repository.Repository
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
+        public void AddDriver(Driver driverToAdd)
+        {
+            if (driverToAdd is null)
+            {
+                throw new ArgumentNullException(nameof(driverToAdd));
+            }
+
+            driverToAdd.DriverID = Guid.NewGuid();
+
+            _context.Add(driverToAdd);
+        }
+
+        public async Task<Driver> GetDriverAsync(Guid id)
+        {
+            return (await _context.Drivers.FirstOrDefaultAsync(d => d.DriverID == id))!;
+        }
+
         public async Task<IEnumerable<Driver>> GetDriversAsync()
         {
             return await _context.Drivers.ToListAsync();
+        }
+
+        public async Task<bool> SaveChangesAsync()
+        {
+            return await _context.SaveChangesAsync() > 0;
         }
     }
 }

@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Domain\HappyTrip.Reservation.System.Domain\HappyTrip.Reservation.System.Domain.csproj" />
+    <ProjectReference Include="..\..\Domain\HappyTrip.Reservation.System.Domain\HappyTrip.Reservation.System.Domain.csproj" />
   </ItemGroup>
 
 </Project>

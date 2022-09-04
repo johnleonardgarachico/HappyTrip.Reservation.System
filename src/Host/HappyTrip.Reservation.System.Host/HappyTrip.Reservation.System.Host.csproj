@@ -19,9 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\HappyTrip.Reservation.System.Controller\HappyTrip.Reservation.System.Controller.csproj" />
     <ProjectReference Include="..\..\Domain\HappyTrip.Reservation.System.Domain\HappyTrip.Reservation.System.Domain.csproj" />
     <ProjectReference Include="..\..\Persistence\HappyTrip.Reservation.System.Repository\HappyTrip.Reservation.System.Repository.csproj" />
+    <ProjectReference Include="..\..\UserInterface\HappyTrip.Reservation.System.Controller\HappyTrip.Reservation.System.Controller.csproj" />
   </ItemGroup>
 
 </Project>
