@@ -17,8 +17,11 @@ namespace HappyTrip.Reservation.System.Controller.Profiles
             CreateMap<Driver, DriverDto>()
                 .ForMember(domain => domain.Name, data => data.MapFrom(src => string.Format("{0} {1}", src.FirstName, src.LastName)))
                 .ForMember(domain => domain.Age, data => data.MapFrom(src => src.BirthDate.GetCurrentAge()));
+            CreateMap<Driver, DriverForUpdateDto>();
 
             CreateMap<DriverForCreation, Driver>();
+            CreateMap<DriverForUpdateDto, Driver>();
+
         }
     }
 }

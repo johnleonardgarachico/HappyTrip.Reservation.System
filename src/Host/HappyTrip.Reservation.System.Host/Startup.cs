@@ -3,6 +3,7 @@ using HappyTrip.Reservation.System.Repository.DatabaseContext;
 using HappyTrip.Reservation.System.Repository.Interfaces;
 using HappyTrip.Reservation.System.Repository.Repository;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Serialization;
 
 namespace HappyTrip.Reservation.System.Host
 {
@@ -17,7 +18,15 @@ namespace HappyTrip.Reservation.System.Host
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers(setupAction =>
+            {
+                setupAction.ReturnHttpNotAcceptable = true;
+            })
+            .AddNewtonsoftJson(setupAction =>
+            {
+                setupAction.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            })
+            .AddXmlDataContractSerializerFormatters();
 
             services.AddDbContext<HappyTripContext>(options =>
             {
@@ -28,7 +37,7 @@ namespace HappyTrip.Reservation.System.Host
 
             services.AddScoped<IHappyTripContext, HappyTripContext>();
             services.AddScoped<IDriverRepository, DriverRepository>();
-            var x = AppDomain.CurrentDomain.GetAssemblies();
+            
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 

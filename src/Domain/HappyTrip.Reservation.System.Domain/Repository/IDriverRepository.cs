@@ -11,7 +11,9 @@ namespace HappyTrip.Reservation.System.Domain
     {
         public Task<Driver> GetDriverAsync(Guid id);
         public Task<IEnumerable<Driver>> GetDriversAsync();
-        void AddDriver(Driver driverToAdd);              
+        void AddDriver(Driver driverToAdd);
+        void RemoveDriver(Driver driver);
+        void UpdateDriver(Driver driver);
         Task<bool> SaveChangesAsync();
     }
 }

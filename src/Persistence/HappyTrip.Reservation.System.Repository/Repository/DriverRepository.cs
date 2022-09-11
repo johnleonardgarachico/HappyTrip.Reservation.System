@@ -22,7 +22,7 @@ namespace HappyTrip.Reservation.System.Repository.Repository
 
         public void AddDriver(Driver driverToAdd)
         {
-            if (driverToAdd is null)
+            if (driverToAdd == null)
             {
                 throw new ArgumentNullException(nameof(driverToAdd));
             }
@@ -42,9 +42,26 @@ namespace HappyTrip.Reservation.System.Repository.Repository
             return await _context.Drivers.ToListAsync();
         }
 
+        public void RemoveDriver(Driver driver)
+        {
+            if (driver == null)
+            {
+                throw new ArgumentNullException(nameof(driver));
+            }
+
+            _context.Drivers.Remove(driver);
+        }
+
+        public void UpdateDriver(Driver driver)
+        {
+            // Intentionally left blank
+            // Update is being done by EntityFramework
+        }
+
         public async Task<bool> SaveChangesAsync()
         {
             return await _context.SaveChangesAsync() > 0;
         }
+
     }
 }
